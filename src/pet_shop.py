@@ -32,10 +32,9 @@ def find_pet_by_name(pet_shop, pet_name):
             pet_name = pets
             return pet_name
 # 8
-def remove_pet_by_name(pet_shop, name):
-    number_in_list = 0
-    while pet_shop["pets"] != name:
-        number_in_list += 1
-        if pet_shop['pets'] == name:
-            break
-    pet_shop["pets"].pop(number_in_list)
+def remove_pet_by_name(pet_shop, name_to_delete):
+    number_in_list = -1
+    for pets in pet_shop["pets"]:
+        if pets["name"] != name_to_delete:
+            number_in_list + 1
+        pet_shop["pets"].pop(int(number_in_list))
