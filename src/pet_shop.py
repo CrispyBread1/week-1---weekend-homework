@@ -38,3 +38,20 @@ def remove_pet_by_name(pet_shop, name_to_delete):
         if pets["name"] != name_to_delete:
             number_in_list + 1
         pet_shop["pets"].pop(int(number_in_list))
+# 9
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_shop["pets"].append(new_pet)
+
+# 10
+def get_customer_cash(customer):
+    return customer["cash"]
+
+# 11
+def remove_customer_cash(customer, num1):
+    customer["cash"] -= int(num1)
+    
+def get_customer_pet_count(customer):
+    return len(customer["pets"])
+
+def add_pet_to_customer(customer, new_pet):
+    customer["pets"].append(new_pet["name"]) 
